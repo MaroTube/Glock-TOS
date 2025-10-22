@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{BOT_NAME}} — Terms of Service & Privacy Policy</title>
+  <meta name="description" content="Terms of Service and Privacy Policy for {{BOT_NAME}} Discord bot." />
+  <style>
+    :root{
+      --bg:#0f1720;
+      --card:#0b1220;
+      --muted:#9aa8bf;
+      --accent:#007BFF;
+      --accent-2:#00d4ff;
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      --max-width:980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+      --sans: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    /* Reset & base */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      background: linear-gradient(180deg,#071422 0%, #071526 60%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.55;
+      padding:40px 20px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      margin-bottom:22px;
+    }
+    .logo{
+      width:64px;height:64px;border-radius:14px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:flex;align-items:center;justify-content:center;
+      box-shadow: 0 6px 18px rgba(0,123,255,0.15), inset 0 -6px 18px rgba(0,0,0,0.15);
+      font-weight:700;color:#081224;font-family:var(--mono);
+      letter-spacing:1px;font-size:22px;
+    }
+    h1{margin:0;font-size:20px;letter-spacing:-0.2px}
+    .meta{color:var(--muted);font-size:13px}
+
+    main{
+      margin-top:10px;
+      display:grid;
+      grid-template-columns: 300px 1fr;
+      gap:20px;
+      align-items:start;
+    }
+
+    nav.card, section.card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    nav.card{
+      position:sticky; top:24px; height: fit-content;
+    }
+
+    nav h3{margin:0 0 8px 0;font-size:13px;color:var(--muted)}
+    .toc a{
+      display:block;padding:8px 10px;margin:6px 0;border-radius:8px;text-decoration:none;color:var(--muted);
+      transition:all .15s ease;
+      font-size:14px;
+    }
+    .toc a:hover{background:var(--glass); color:var(--accent)}
+
+    section.card{
+      padding:28px;
+      color:#eaf3ff;
+    }
+
+    .section-title{
+      display:flex;align-items:center;gap:12px;margin-bottom:12px;
+    }
+    .badge{
+      background: rgba(0,123,255,0.12);
+      color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px;
+    }
+    h2{margin:0;font-size:18px}
+    h3.section{margin-top:22px;margin-bottom:8px;color:var(--accent);font-size:15px}
+    p, ul, ol{color:#dbeafc;font-size:14px}
+    ul,ol{margin:8px 0 16px 20px}
+    li{margin:8px 0}
+    code{background:rgba(255,255,255,0.03);padding:4px 8px;border-radius:6px;font-family:var(--mono);font-size:13px}
+    pre{background:rgba(0,0,0,0.18);padding:12px;border-radius:8px;overflow:auto;font-family:var(--mono);font-size:13px}
+
+    .muted{color:var(--muted);font-size:13px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02);font-size:13px}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+    a.link{color:var(--accent);text-decoration:none}
+    .alert{background:linear-gradient(90deg, rgba(255,200,60,0.06), rgba(255,255,255,0.02));border-left:4px solid rgba(255,200,60,0.12);padding:10px;border-radius:8px;color:#fff;margin:12px 0}
+
+    @media(max-width:900px){
+      main{grid-template-columns:1fr; padding-bottom:40px}
+      nav.card{position:relative}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">GK</div>
+      <div>
+        <h1>{{BOT_NAME}} — Terms of Service & Privacy Policy</h1>
+        <div class="meta">Effective date: <strong>{{EFFECTIVE_DATE}}</strong> · Contact: <a class="link" href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a></div>
+      </div>
+    </header>
+
+    <main>
+      <nav class="card" aria-label="Table of contents">
+        <h3>Quick navigation</h3>
+        <div class="toc">
+          <a href="#tos">1. Terms of Service (TOS)</a>
+          <a href="#tos-usage">• Usage & Acceptable Conduct</a>
+          <a href="#tos-liability">• Disclaimers & Liability</a>
+          <a href="#privacy">2. Privacy Policy</a>
+          <a href="#privacy-data">• Data We Collect</a>
+          <a href="#privacy-how">• How We Use Data</a>
+          <a href="#privacy-rights">• Your Rights</a>
+          <a href="#security">3. Security & Retention</a>
+          <a href="#economy">4. Economy & Transactions</a>
+          <a href="#changes">5. Changes & Contact</a>
+          <a href="#legal">6. Legal</a>
+        </div>
+      </nav>
+
+      <section class="card" id="tos">
+        <div class="section-title">
+          <div class="badge">TERMS OF SERVICE</div>
+          <h2>1. Terms of Service — use of {{BOT_NAME}}</h2>
+        </div>
+
+        <p class="muted">Welcome. These Terms of Service ("TOS") govern your access to and use of the Discord bot <strong>{{BOT_NAME}}</strong>. By inviting, enabling, or interacting with {{BOT_NAME}}, you agree to be bound by these terms. If you do not agree, do not use the bot.</p>
+
+        <h3 class="section" id="tos-usage">1.1 Usage & Acceptable Conduct</h3>
+        <ul>
+          <li><strong>Authorized Use:</strong> You may use {{BOT_NAME}} in servers where you have permission. You are responsible for following your server rules and Discord Terms of Service.</li>
+          <li><strong>No illegal activity:</strong> Do not use the bot to facilitate illegal activities, harassment, stalking, doxxing, hate speech, threats, or anything that violates local laws or Discord policies.</li>
+          <li><strong>Content responsibility:</strong> You are responsible for the content you post. {{BOT_NAME}} may log commands and content for moderation, analytics, or troubleshooting.</li>
+          <li><strong>Rate limits & abuse:</strong> Excessive or automated requests that cause undue load may result in request throttling or temporary suspension.</li>
+          <li><strong>No reverse engineering:</strong> You may not decompile, copy, or reverse-engineer the code unless explicitly permitted.</li>
+        </ul>
+
+        <h3 class="section" id="tos-liability">1.2 Disclaimers, Liability & Indemnity</h3>
+        <p>{{BOT_NAME}} is provided "as-is" without warranties of any kind. The bot may use third-party AI services and the content generated may be inaccurate, biased, or offensive. You acknowledge and accept these limitations.</p>
+        <ul>
+          <li><strong>Limitation of liability:</strong> To the fullest extent permitted by law, the owner(s) and operators of {{BOT_NAME}} shall not be liable for indirect, incidental, special, consequential, or punitive damages arising from use of the bot.</li>
+          <li><strong>Indemnity:</strong> You agree to indemnify and hold harmless the bot owner(s) from any claim or demand arising from your breach of these TOS or your misuse.</li>
+        </ul>
+
+        <h3 class="section">1.3 Third-party services & data</h3>
+        <p>{{BOT_NAME}} may integrate with third-party services (e.g., AI providers, hosting, analytics). Those services have their own terms and privacy policies.</p>
+
+        <h3 class="section">1.4 Termination</h3>
+        <p>The bot owner(s) reserve the right to suspend or remove access for any user or server at their discretion. Upon termination, all rights granted to you under this TOS cease immediately.</p>
+
+        <h3 class="section">1.5 Governing law & disputes</h3>
+        <p>These terms are governed by the laws of the jurisdiction of the bot owner(s). Any disputes should first attempt informal resolution via <a class="link" href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>.</p>
+
+        <div class="alert">
+          <strong>Note:</strong> This TOS is a template and does not substitute legal counsel. If you need a legally-binding document for a commercial project, consult a lawyer.
+        </div>
+
+        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.04);margin:18px 0">
+
+        <div class="section-title">
+          <div class="badge">PRIVACY</div>
+          <h2 id="privacy">2. Privacy Policy — how {{BOT_NAME}} handles data</h2>
+        </div>
+
+        <p class="muted">This Privacy Policy explains what data we collect when you use {{BOT_NAME}}, why we collect it, and how you can manage or request deletion of your data.</p>
+
+        <h3 class="section" id="privacy-data">2.1 Data we collect</h3>
+        <ul>
+          <li><strong>Command logs:</strong> The bot records commands, timestamps, user ID (numeric), server ID, and channel ID for functionality, analytics, and abuse prevention.</li>
+          <li><strong>Public content:</strong> Any message you post in a public text channel that the bot can see may be logged if you interact with the bot (i.e., commands, prompts).</li>
+          <li><strong>Profile data:</strong> Avatar, username, discriminator, and user ID for generating profile cards. We do not store image binaries unless explicitly asked.</li>
+          <li><strong>Economy data:</strong> If enabled, simple balances, transaction history, and daily reward timestamps are stored for gameplay features.</li>
+          <li><strong>Diagnostics:</strong> System logs, errors, and usage metrics to support operation and debugging.</li>
+        </ul>
+
+        <h3 class="section" id="privacy-how">2.2 How we use your data</h3>
+        <ul>
+          <li>Provide and maintain the bot’s features (AI, games, profiles, economy).</li>
+          <li>Detect and prevent abuse, enforce rules, and debug issues.</li>
+          <li>Aggregate anonymous usage metrics to improve service quality.</li>
+          <li>Respond to lawful requests from authorities where required by law.</li>
+        </ul>
+
+        <h3 class="section">2.3 Data retention & deletion</h3>
+        <p>We retain logs and economy data for a reasonable period (default: 90 days) unless required otherwise for legal or operational reasons. You can request deletion of your personal data by contacting <a class="link" href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>. We will respond to deletion requests within a reasonable timeframe and will remove user-specific data where feasible.</p>
+
+        <h3 class="section" id="privacy-rights">2.4 Your rights</h3>
+        <p>Depending on your jurisdiction, you may have rights such as:</p>
+        <ul>
+          <li>Access to data we hold about you</li>
+          <li>Correction of inaccurate data</li>
+          <li>Deletion or restriction of processing</li>
+          <li>Export of your personal data</li>
+        </ul>
+        <p>To exercise rights, contact <a class="link" href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>. We may require verification to process requests.</p>
+
+        <h3 class="section">2.5 Children</h3>
+        <p>The bot is not intended for children under 13 (or applicable minimum age). We do not knowingly collect personal information from children; if you believe we have, contact <a class="link" href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a> and we'll act to remove it.</p>
+
+        <h3 class="section">2.6 Third-party services</h3>
+        <p>The bot uses third-party AI and hosting providers. Those providers may process data and have their own privacy policies. We recommend reviewing those providers’ policies (e.g., Hugging Face, OpenAI, hosting services).</p>
+
+        <h3 class="section">2.7 Cookies & tracking</h3>
+        <p>The bot itself does not set browser cookies. If you use the bot’s website or hosted dashboard, that service may use cookies — details will be provided on that site.</p>
+
+        <h3 class="section" id="security">3. Security & retention</h3>
+        <ul>
+          <li>We implement reasonable administrative and technical safeguards to protect data.</li>
+          <li>No system is completely secure — in case of a data breach we will notify affected parties where required by law.</li>
+          <li>Backup & retention policies: logs are rotated daily and retained for a default period (configurable).</li>
+        </ul>
+
+        <h3 class="section" id="economy">4. Economy, transactions & virtual goods</h3>
+        <p>If the bot offers virtual currencies or items (coins, badges, leaderboard points), those are virtual only and have no real-world monetary value. Rules:</p>
+        <ul>
+          <li>Virtual currency is non-transferable outside the bot unless explicitly implemented.</li>
+          <li>We reserve the right to adjust, remove, or reset economy balances for abuse prevention.</li>
+          <li>All economy actions are logged for integrity and audit purposes.</li>
+        </ul>
+
+        <h3 class="section" id="changes">5. Changes, updates & contact</h3>
+        <p>We may update these policies; we will post the effective date at the top. Significant changes will be announced in the bot’s repository or via contact channels.</p>
+        <p>Contact: <a class="link" href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a></p>
+
+        <h3 class="section" id="legal">6. Legal & final notes</h3>
+        <ol>
+          <li>Entire agreement: These terms are the entire agreement regarding the bot’s use between you and the bot owner(s).</li>
+          <li>Severability: If any provision is invalid, remaining provisions remain in force.</li>
+          <li>Waiver: Failure to enforce a provision doesn't constitute a waiver.</li>
+        </ol>
+
+        <footer>
+          <div class="muted">© {{YEAR}} {{BOT_NAME}}. For questions or legal requests contact <a class="link" href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>.</div>
+        </footer>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // small helper to substitute placeholders if you want to auto-fill in-browser
+    (function(){
+      const data = {
+        BOT_NAME: "Glock Bot",
+        CONTACT_EMAIL: "akxcco@gmail.com",
+        EFFECTIVE_DATE: (new Date()).toISOString().slice(0,10),
+        YEAR: (new Date()).getFullYear()
+      };
+      document.body.querySelectorAll('*').forEach(node=>{
+        if(node.childNodes && node.childNodes.length){
+          node.childNodes.forEach((cn)=>{
+            if(cn.nodeType === 3){
+              cn.nodeValue = cn.nodeValue.replace(/\{\{BOT_NAME\}\}/g, data.BOT_NAME)
+                                         .replace(/\{\{CONTACT_EMAIL\}\}/g, data.CONTACT_EMAIL)
+                                         .replace(/\{\{EFFECTIVE_DATE\}\}/g, data.EFFECTIVE_DATE)
+                                         .replace(/\{\{YEAR\}\}/g, data.YEAR);
+            }
+          });
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
